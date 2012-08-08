@@ -76,7 +76,8 @@
             <input type="text" class="span3" placeholder="...">
             <label>Intereses</label>
             <input type="text" class="span3" placeholder="...">
-              
+            <label>dsdsd</label>
+            <input type="text" class="span3" placeholder="...">
             <label class="radio">
             </label>
             

@@ -14,7 +14,15 @@ class Index extends CI_Controller {
     {
        
         $this->load->model('Facebook_m');
+        
         $this->load->library('openid');
+        
+        $this->load->library('Mongo_db');
+        
+        $us = $this->mongo_db->get('u');
+        var_dump($us);
+
+
 
         $openid = new Openid("localhost");
 
@@ -81,6 +89,7 @@ class Index extends CI_Controller {
             $userdata = $this->session->userdata('fb_data');
             $data = array_merge($data,$userdata);
             $this->load->view('index',$data);
+            echo 'sss';
         }
 
     }
