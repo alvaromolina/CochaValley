@@ -65,7 +65,7 @@
           <h2>Cocha Valley Mixer </h2>
           <h3><i class="icon-calendar"></i> 11-08-2012</h3>
           <h3><i class="icon-map-marker"></i> La muela</h3>
-          <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+          <p>Chuck Norris odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
           <p><a class="btn" href="#">Ver mas detalles </a></p>
           <p><a class="btn btn-large btn-success" href="<?=base_url();?>index/register">Registrate</a></p>
         </div>
