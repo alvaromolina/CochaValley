@@ -64,7 +64,6 @@
         <div class="span4">
         </div>
         <div class="span4">
-        <a href="<?=base_url();?>index/tmpregister"> <img src="http://bayrun.com.au/wordpress/facebook-login-button-png-i11.png"></a> 
         </div>
         <div class="span4">
 

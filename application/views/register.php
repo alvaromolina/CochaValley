@@ -1,86 +1,47 @@
-
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <title>CochaValley</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="">
-
-    <!-- Le styles -->
-    <link href="http://twitter.github.com/bootstrap/assets/css/bootstrap.css" rel="stylesheet">
-    <style type="text/css">
-      body {
-        padding-top: 60px;
-        padding-bottom: 40px;
-      }
-    </style>
-    <link href="http://twitter.github.com/bootstrap/assets/css/bootstrap.css" rel="stylesheet">
-
-    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
-    <!--[if lt IE 9]>
-      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-
-    <!-- Le fav and touch icons -->
-    <link rel="shortcut icon" href="http://twitter.github.com/bootstrap/assets/ico/favicon.ico">
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://twitter.github.com/bootstrap/assets/ico/apple-touch-icon-144-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://twitter.github.com/bootstrap/assets/ico/apple-touch-icon-114-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://twitter.github.com/bootstrap/assets/ico/apple-touch-icon-72-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" href="http://twitter.github.com/bootstrap/assets/ico/apple-touch-icon-57-precomposed.png">
-  </head>
-
-  <body>
-
-    <div class="navbar navbar-fixed-top">
-      <div class="navbar-inner">
-        <div class="container">
-          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </a>
-          <a class="brand" href="#">Cocha Valley</a>
-          <!--
-          <div class="nav-collapse">
-            <ul class="nav">
-              <li class="active"><a href="#">Home</a></li>
-              <li><a href="#about">About</a></li>
-              <li><a href="#contact">Contact</a></li>
-            </ul>
-          </div>
-          <!--/.nav-collapse -->
-          
-        </div>
-      </div>
-    </div>
-
-    <div class="container">
+<?php $this->load->view('header'); ?>
 
 
       <!-- Example row of columns -->
-      <div class="row">
-        <div class="span4">
+      <div class="row well">
+        <div class="span3">
+          <img class="thumbnail"  src="https://graph.facebook.com/<?=$fid?>/picture?type=large">
+          <!--
           <img src="http://www.strangebeaver.com/wp-content/uploads/2011/01/fb/1.jpg">
           <p><a class="btn" href="#">Subir foto </a></p>
-  
+          -->
+          <br>
+          <img src="http://dcbdluf1ahqio.cloudfront.net/facebook/32x32.png">
         </div>
         <div class="span8">
-          <form class="well" action="<?=base_url();?>">
-            <label>Nombre</label>
-            <input type="text" class="span3" placeholder="...">
-            <label>Apellidos</label>
-            <input type="text" class="span3" placeholder="...">
-            <label>Email</label>
-            <input type="text" class="span3" placeholder="...">
-            <label>Intereses</label>
-            <input type="text" class="span3" placeholder="...">
-            <label>dsdsd</label>
-            <input type="text" class="span3" placeholder="...">
-            <label class="radio">
-            </label>
-            
+         <form class="form-horizontal" action="<?=base_url().'index/registerUser'?>" method="POST">
+          <fieldset>
+            <legend>Registro Cocha Valley</legend>
+            <div class="control-group">
+              <label class="control-label" for="input01">Nombre</label>
+              <div class="controls">
+                <input type="text" class="input-xlarge" id="first_name" name="first_name" value="<?=$first_name?>">
+                <input type="hidden"  id="id" name="id" value="<?=$id?>">
+
+              </div>
+            </div>
+            <div class="control-group">
+              <label class="control-label" for="input01">Apellido</label>
+              <div class="controls">
+                <input type="text" class="input-xlarge" id="last_name" name="last_name" value="<?=$last_name?>">
+              </div>
+            </div>
+           <div class="control-group">
+              <label class="control-label" for="input01">Email</label>
+              <div class="controls">
+                <input type="text" class="input-xlarge" id="email" name="email" value="<?=$email?>">
+              </div>
+            </div>
+           <div class="control-group">
+              <label class="control-label" for="input01">Intereses/Tags</label>
+              <div class="controls">
+                <input type="text" class="input-xlarge" id="tags" name="tags" value="<?=$tags?>">
+              </div>
+            </div>
             <div class="control-group">
             <label class="control-label">Confirmar tu participacion</label>
             <div class="controls">
@@ -100,37 +61,14 @@
               </label>
             </div>
           </div>
-            
-            <button type="submit" class="btn">Submit</button>
+          </fieldset>
+
+          <div class="form-actions">
+            <button type="submit" class="btn btn-primary">Guadar</button>
+            <button class="btn">Cancelar</button>
+          </div>
           </form>
         </div>
 
       </div>
-
-      <hr>
-
-      <footer>
-        <p>&copy; CochaValley 2012</p>
-      </footer>
-
-    </div> <!-- /container -->
-
-    <!-- Le javascript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="http://twitter.github.com/bootstrap/assets/js/jquery.js"></script>
-    <script src="http://twitter.github.com/bootstrap/assets/js/bootstrap-transition.js"></script>
-    <script src="http://twitter.github.com/bootstrap/assets/js/bootstrap-alert.js"></script>
-    <script src="http://twitter.github.com/bootstrap/assets/js/bootstrap-modal.js"></script>
-    <script src="http://twitter.github.com/bootstrap/assets/js/bootstrap-dropdown.js"></script>
-    <script src="http://twitter.github.com/bootstrap/assets/js/bootstrap-scrollspy.js"></script>
-    <script src="http://twitter.github.com/bootstrap/assets/js/bootstrap-tab.js"></script>
-    <script src="http://twitter.github.com/bootstrap/assets/js/bootstrap-tooltip.js"></script>
-    <script src="http://twitter.github.com/bootstrap/assets/js/bootstrap-popover.js"></script>
-    <script src="http://twitter.github.com/bootstrap/assets/js/bootstrap-button.js"></script>
-    <script src="http://twitter.github.com/bootstrap/assets/js/bootstrap-collapse.js"></script>
-    <script src="http://twitter.github.com/bootstrap/assets/js/bootstrap-carousel.js"></script>
-    <script src="http://twitter.github.com/bootstrap/assets/js/bootstrap-typeahead.js"></script>
-
-  </body>
-</html>
+<?php $this->load->view('footer'); ?>

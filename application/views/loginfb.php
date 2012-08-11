@@ -12,7 +12,7 @@ http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
  
 <body>
 <script type="text/javascript">
-window.opener.location.reload();
+window.opener.location.href = "<?=$nexturl?>";
 window.close();
 </script>
 </body>

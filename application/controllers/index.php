@@ -10,7 +10,87 @@ class Index extends CI_Controller {
         
     }
  
+ 
+ 
     function index()
+    {
+       
+        $this->load->model('Facebook_m');
+        $userdata = $this->session->userdata('fb_data');
+        $data = array();
+        $data = array_merge($data,$userdata);
+        $this->load->view('index',$data);
+
+    }
+    
+    
+    function register()
+    {
+       
+        $this->load->model('Facebook_m');
+        $this->load->model('User_m');
+
+        
+        $data = array();
+        $userdata = $this->session->userdata('fb_data');
+        $data = array_merge($data,$userdata);
+        $data = array_merge($this->User_m->user_default,$data);
+      
+        if(isset($_GET['state']) and isset($_GET['code'])){
+            
+            if($data['id'])
+                $data['nexturl'] = base_url().'index/register';
+            else
+                $data['nexturl'] = base_url().'index';
+
+            $this->load->view('loginfb',$data);
+            
+        }elseif(isset($_GET['error_reason'])){
+            $data['nexturl'] = base_url().'index';
+            $this->load->view('loginfb',$data);
+        }else{
+            if($data['id'])
+                $this->load->view('register',$data);
+            else
+                $this->load->view('index',$data);
+        }
+    }
+    
+    public function registerUser(){
+        
+        $_POST['name'] = $_POST['first_name'].' '.$_POST['last_name'];
+        $data = $_POST;
+        $userdata = $this->session->userdata('fb_data');
+        $data = array_merge($userdata,$data);
+        $this->load->model('user_m');
+        $this->user_m->set($data);
+        $this->load->model('Facebook_m');
+        $this->load->view('index',$data);
+
+    }
+    
+    
+    public function connect(){
+        $this->load->model('Facebook_m');
+        $data = $this->session->userdata('fb_data');
+        $this->load->view('connect',$data);
+
+    }
+    
+    public function logout()
+    {
+        
+        $this->load->model('Facebook_m');
+
+        $this->Facebook_m->facebook->destroySession(null);
+        //setcookie('fbs_'.$this->Facebook_m->facebook->getAppId(), '', time()-100, '/', 'localhost');
+        session_destroy();
+        $this->session->sess_destroy();
+        redirect(base_url());
+    
+    }
+    
+    function backup()
     {
        
         $this->load->model('Facebook_m');
@@ -20,7 +100,6 @@ class Index extends CI_Controller {
         $this->load->library('Mongo_db');
         
         $us = $this->mongo_db->get('u');
-        var_dump($us);
 
 
 
@@ -28,9 +107,7 @@ class Index extends CI_Controller {
 
        
         $data = array();
-        
-        
-        
+                
         if ($openid->mode) {
             if ($openid->mode == 'cancel') {
                 
@@ -94,37 +171,10 @@ class Index extends CI_Controller {
 
     }
     
-    public function register(){
-        $data = array();
-        $this->load->view('registerfb',$data);
-    }
-    
-    public function tmpregister(){
-        
-        $data = array();
-        $this->load->view('register',$data);
 
-    }
-    
-    public function connect(){
-        
-        $data = array();
-        $this->load->view('connect',$data);
 
-    }
     
-    public function logout()
-    {
-        
-        $this->load->model('Facebook_m');
 
-        $this->Facebook_m->facebook->destroySession(null);
-        //setcookie('fbs_'.$this->Facebook_m->facebook->getAppId(), '', time()-100, '/', 'localhost');
-        session_destroy();
-        $this->session->sess_destroy();
-        redirect(base_url());
-    
-    }
 
 
   }

@@ -51,7 +51,9 @@ class Facebook_m extends CI_Model {
                 error_log($e);
                 $user = null;
             }
+        
         }
+        
         $fb_data = array(
                         'fid' => $user,
                         'id' => $id,
@@ -66,10 +68,11 @@ class Facebook_m extends CI_Model {
                         'gender' => (isset($profile['gender'])) ? $profile['gender'] : '',
                         'city' => (isset($user_db['city'])) ? $user_db['city'] : $fb['city'],
                         'country' => (isset($user_db['country'])) ? $user_db['country'] : $fb['country'],
-                        'loginUrl' => $this->facebook->getLoginUrl(array( 'scope' => 'email','display'=>'popup','redirect_uri' => base_url())),
+                        'loginUrl' => $this->facebook->getLoginUrl(array( 'scope' => 'email','display'=>'popup','redirect_uri' => base_url().'index/register')),
                         'logoutUrl' => $this->facebook->getLogoutUrl(),
                         'appId' =>    $this->facebook->getAppID()
                       );
         $this->session->set_userdata('fb_data', $fb_data);
+        
     }
 }
