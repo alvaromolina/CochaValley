@@ -78,8 +78,8 @@ class Event extends CI_Controller {
         $data = array();
         $data = $this->session->userdata('fb_data');
         
-        if (!empty($_GET['q'])) {
-            $keyword = $_GET['q'];  
+        if (!empty($_GET['kw'])) {
+            $keyword = $_GET['kw'];  
         } else {
             $keyword = '';            
         }
@@ -87,12 +87,12 @@ class Event extends CI_Controller {
         $this->load->library('Mongo_db');
         
         $users = $this->mongo_db
-           // ->where(array('first_name' => 'Mauro'))
-            //->where(array('tags' => '/'.$keyword.'/'))
-            //->where_in('tags', array($keyword))
+            ->like('tags', $keyword, true, true)
             ->get('user');
         
         $data['users'] = $users;
+        
+        $data['keyword'] = $keyword;
         
         $this->load->view('connect', $data);
     }
