@@ -70,7 +70,7 @@ class Facebook_m extends CI_Model {
                         'going' => (isset($profile['going'])) ? $profile['going'] : '',
                         'city' => (isset($user_db['city'])) ? $user_db['city'] : $fb['city'],
                         'country' => (isset($user_db['country'])) ? $user_db['country'] : $fb['country'],
-                        'loginUrl' => $this->facebook->getLoginUrl(array( 'scope' => 'email','display'=>'popup','redirect_uri' => base_url().'event/register')),
+                        'loginUrl' => $this->facebook->getLoginUrl(array( 'scope' => 'email','display'=>'popup','redirect_uri' => base_url())),
                         'logoutUrl' => $this->facebook->getLogoutUrl(),
                         'appId' =>    $this->facebook->getAppID()
                       );
