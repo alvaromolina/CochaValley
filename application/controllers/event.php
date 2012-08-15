@@ -39,9 +39,9 @@ class Event extends CI_Controller {
         if(isset($_GET['state']) and isset($_GET['code'])){
             
             if($data['id'])
-                $data['nexturl'] = base_url().'index/register';
+                $data['nexturl'] = base_url().'event/register';
             else
-                $data['nexturl'] = base_url().'index';
+                $data['nexturl'] = base_url().'event';
 
             $this->load->view('loginfb',$data);
             

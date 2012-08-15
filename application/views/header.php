@@ -72,11 +72,11 @@
                         <b class="caret"></b>
                   </a>
                   <ul class="dropdown-menu">
-                      <li><a href="<?=base_url().'index/profile'?>" > Perfil
+                      <li><a href="<?=base_url().'event/profile'?>" > Perfil
                       </a></li>
                   </ul>
                 </li>
-                <li><a href="<?=base_url().'index/logout'?>" style="font-family: 'Oleo Script', cursive; ">Salir</a></li>
+                <li><a href="<?=base_url().'event/logout'?>" style="font-family: 'Oleo Script', cursive; ">Salir</a></li>
             </ul>
 
                 <?php } ?>
