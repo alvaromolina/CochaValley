@@ -15,6 +15,16 @@
         padding-top: 60px;
         padding-bottom: 40px;
       }
+        
+        .users { overflow: hidden; margin: 0; padding: 0; list-style: none; }
+          .users li { position: relative; overflow: hidden; float: left; width: 220px; margin: 0 20px 20px 0; padding: 10px; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; background-color: #F5F5F5; border: 1px solid rgba(0, 0, 0, 0.05); border-radius: 4px; }
+            .users li:hover { box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2); }
+            .users li:nth-child(4n) { margin-right: 0; }
+              .userBox { }
+              .userName { overflow: hidden; height: 26px; line-height: 26px; margin: 0 0 6px 0; padding: 0; text-align: center; font-size: 22px; font-weight: bold; } 
+              .userPic { overflow: hidden; height: 186px; text-align: center; } 
+              .userTags { position: absolute; bottom: 10px; left: 10px; display: none; width: 192px; padding: 4px; background: rgba(0, 0, 0, 0.8); font-size: 11px; color: #FFF; }
+              .users li:hover .userTags { display: block; }
     </style>
     <link href="<?=base_url();?>css/jquery.tagsinput.css" rel="stylesheet">
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
@@ -56,7 +66,7 @@
           <div class="nav-collapse">
             <ul class="nav">
               <li class="active"><a href="<?=base_url();?>event/">Inicio</a></li>
-              <li><a href="">Conectar con participantes (pronto)</a></li>
+              <li><a href="<?=base_url();?>event/connect">Conectar con participantes</a></li>
             </ul>
                 <?php if ($id) { ?>
             <ul class="nav pull-right">
