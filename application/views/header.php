@@ -44,7 +44,6 @@
   </head>
 
   <body>
-
     <div class="navbar navbar-fixed-top">
       <div class="navbar-inner">
         <div class="container">
@@ -59,7 +58,6 @@
               <li class="active"><a href="<?=base_url();?>event/">Inicio</a></li>
               <li><a href="<?=base_url();?>event/connect">Conectar con participantes</a></li>
             </ul>
-
                 <?php if ($id) { ?>
             <ul class="nav pull-right">
                 <li>
@@ -72,16 +70,13 @@
                         <b class="caret"></b>
                   </a>
                   <ul class="dropdown-menu">
-                      <li><a href="<?=base_url().'event/profile'?>" > Perfil
+                      <li><a href=""> Perfil (pronto)
                       </a></li>
                   </ul>
                 </li>
                 <li><a href="<?=base_url().'event/logout'?>" style="font-family: 'Oleo Script', cursive; ">Salir</a></li>
             </ul>
-
                 <?php } ?>
-
-            
           </div>
         </div>
       </div>

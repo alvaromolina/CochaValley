@@ -16,9 +16,9 @@ class Event extends CI_Controller {
     {
        
         $this->load->model('Facebook_m');
+        $this->load->model('User_m');
         $userdata = $this->session->userdata('fb_data');
-        $data = array();
-        $data = array_merge($data,$userdata);
+        $data = array_merge($this->User_m->user_default,$userdata);
         $this->load->view('index',$data);
 
     }
@@ -49,8 +49,11 @@ class Event extends CI_Controller {
             $data['nexturl'] = base_url().'index';
             $this->load->view('loginfb',$data);
         }else{
-            if($data['id'])
+            if($data['id']){
+                $data['role'] = is_array($data['role']) ? $data['role'] : array();
+                $data['looking'] = is_array($data['looking']) ? $data['looking'] : array();
                 $this->load->view('register',$data);
+            }
             else
                 $this->load->view('index',$data);
         }
@@ -105,6 +108,15 @@ class Event extends CI_Controller {
         $this->session->sess_destroy();
         redirect(base_url());
     
+    }
+    
+    public function privacy(){
+        $this->load->view('privacy');
+        
+    }
+    public function tos(){
+        $this->load->view('tos');
+        
     }
     
     function backup()

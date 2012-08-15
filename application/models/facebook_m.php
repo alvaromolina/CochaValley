@@ -38,6 +38,7 @@ class Facebook_m extends CI_Model {
                     $profile['first_name'] = (isset($user_db['first_name'])) ? $user_db['first_name'] : '';
                     $profile['last_name'] = (isset($user_db['last_name'])) ? $user_db['last_name'] : '';
                     $profile['title'] = (isset($user_db['title'])) ? $user_db['title'] : '';
+                    $profile['going'] = (isset($user_db['going'])) ? $user_db['going'] : '';
 
                 }else{
                     $profile = $this->facebook->api('/me?fields=id,name,link,email,gender,locale,first_name,last_name');
@@ -66,6 +67,7 @@ class Facebook_m extends CI_Model {
                         'title' => (isset($profile['title'])) ? $profile['title'] : '',
                         'website' => (isset($profile['website'])) ? $profile['website'] : '',
                         'gender' => (isset($profile['gender'])) ? $profile['gender'] : '',
+                        'going' => (isset($profile['going'])) ? $profile['going'] : '',
                         'city' => (isset($user_db['city'])) ? $user_db['city'] : $fb['city'],
                         'country' => (isset($user_db['country'])) ? $user_db['country'] : $fb['country'],
                         'loginUrl' => $this->facebook->getLoginUrl(array( 'scope' => 'email','display'=>'popup','redirect_uri' => base_url().'event/register')),

@@ -19,11 +19,11 @@ text-align: center;
         <div class="span8">
           <h2>Primer evento Cocha Valley  </h2>
           <h3><i class="icon-calendar"></i> 10/08/2012 4:44 PM</h3>
-          <h3><i class="icon-map-marker"></i><a href="https://www.facebook.com/Cafevisual" target="_blank">La muelita</a>
+          <h3><i class="icon-map-marker"></i><a href="https://www.facebook.com/Cafevisual" target="_blank">La Muelita</a>
           <a href="http://amerpages.com/spa/bolivia/items/view/3712/la-muela-del-diablo-pub-cultural/" target="_blank" style="font-size: x-small; color: grey;">Direcci&oacute;n</a>
           </h3>
           <p>
-            Descubre las nuevas oportunidades para startups en Bolivia y el mundo. Conectate con la comunidad mas vibrante  de tecnolog&iacute;a en Cochabamba.  Encuentra a tu pr&oacute;ximo co-founder o simplemente pasa un buen momento.
+            Descubre las nuevas oportunidades para startups en Bolivia y el mundo. Conectate con la comunidad mas vibrante de tecnolog&iacute;a en Cochabamba.  Encuentra a tu pr&oacute;ximo co-founder o simplemente pasa un buen momento.
           </p>
           <div class="modal hide" id="myModal">
             <div class="modal-header">
@@ -31,23 +31,22 @@ text-align: center;
               <h3>Cocha Valley</h3>
             </div>
             <div class="modal-body">
-              <p>Descubre las nuevas oportunidades para startups en Bolivia y el mundo. Conectate con la comunidad mas vibrante  de tecnolog&iacute;a en Cochabamba.  Encuentra a tu pr&oacute;ximo co-founder o simplemente pasa un buen momento.
-</p>
+              <p>
+                Descubre las nuevas oportunidades para startups en Bolivia y el mundo. Conectate con la comunidad mas vibrante de tecnolog&iacute;a en Cochabamba.  Encuentra a tu pr&oacute;ximo co-founder o simplemente pasa un buen momento.
+              </p>
               <h4>Inscripciones</h4>
-                Inscripciones
-                Solo se aceptaran a personas que se hayan registrado y confirmado su asistencia a través del portal cochavalley.com
-
+                Solo se aceptaran a personas que se hayan registrado y confirmado su asistencia a trav&eacute;s del portal <a href="http://cochavalley.com/event">cochavalley.com/event</a>
               <h4>Cronograma</h4>
               <p>
                 
                 4:44 - 5:00 pm: Registro de personas <br>
-                5:00 - 5:10 pm: Presentación Cocha Valley <br>
+                5:00 - 5:10 pm: Presentaci&oacute;n Cocha Valley <br>
                 5:10 - 6:00 pm:  Presentaciones de utilidad para la comunidad <br>
---- Se están definiendo presentaciones de mentores y personas de la comunidad que tiene información o experiencias útiles para compartir 
-Si tienes algo útil que compartir con la comunidad favor envía tu tema, descripción de lo que quieres presentar a contact@cochavalley.com 
-Serán presentaciones entre 5 y 10 min máximo por persona.
+--Se tendr&aacute;n presentaciones de mentores y personas de la comunidad con informaci&oacute;n o experiencias &uacute;tiles para compartir.
+Si tu tienes algo &uacute;til que compartir con la comunidad favor env&iacute;a una descripci&oacute;n de lo que quieres presentar a <a href="mailto:contact@cochavalley.com">contact@cochavalley.com</a>
+Ser&aacute;n presentaciones entre 5 y 10 min m&aacute;ximo por persona.
 -- <br>
-6:00 pm - 7:00 pm: Micrófono abierto para presentar ideas y proyectos. <br>
+6:00 pm - 7:00 pm: Micr&oacute;fono abierto para presentar ideas y proyectos. <br>
 -- Utilizar este espacio para que cualquier idea que deseen compartir. 
 1 a 3 min por persona - <br>
 7:00 pm - Para adelante Networking y chelas! (o lo que quieras) <br>
@@ -57,16 +56,32 @@ Serán presentaciones entre 5 y 10 min máximo por persona.
               <a href="#" class="btn" data-dismiss="modal">Close</a>
             </div>
           </div>
-          
 <a class="btn btn-info" data-toggle="modal" href="#myModal" >Ver mas detalles >></a>
                 <br>
                 <br>
+                <?php if ($id) { ?>
+                  <?php if ($going=='sure') { ?>
+                    <div class="alert alert-success">
+                      Ya estas registrado en el evento. Haz click <a href="<?=base_url()?>event/register">aqui</a> para modificar tus datos.
+                    </div>
+  
+                  <? } elseif($going=='maybe') { ?>
+                    <div class="alert alert-warning">
+                      Te registraste en el sistema pero no confirmaste tu presencia en el evento. Solo aquellos que confirmen su presencia podran ingresar. Haz click <a href="<?=base_url()?>event/register">aqui</a> para modificar tus datos.
+                    </div>
+                  <? } else { ?>
+                   <div class="alert alert-warning">
+                      Gracias por dejarnos saber que no podras ir al evento. Si algo cambio haz click <a href="<?=base_url()?>event/register">aqui</a> para modificar tus datos.
+                    </div>
+                  <? } ?>
 
-                <p><a href="javascript:popup('<?=$loginUrl;?>','',500,350);" class="fb_login" style="padding-bottom: 0px; color: white;  padding-top: 15px; height: 40px;">
+                <? } else { ?>
+                <a href="javascript:popup('<?=$loginUrl;?>','',500,350);" class="fb_login" style="padding-bottom: 0px; color: white;  padding-top: 15px; height: 40px;">
                   <span style="margin-left: 25px; font-size: 17px; ">
                     <strong>Registrate con Facebook</strong>
                   </span>
                   </a>
+                <? } ?>
 
         </div>
       </div>
