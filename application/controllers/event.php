@@ -72,9 +72,26 @@ class Event extends CI_Controller {
     
     public function connect(){
         $this->load->model('Facebook_m');
+        $data = array();
         $data = $this->session->userdata('fb_data');
-        $this->load->view('connect',$data);
-
+        
+        if (!empty($_GET['q'])) {
+            $keyword = $_GET['q'];  
+        } else {
+            $keyword = '';            
+        }
+        
+        $this->load->library('Mongo_db');
+        
+        $users = $this->mongo_db
+           // ->where(array('first_name' => 'Mauro'))
+            //->where(array('tags' => '/'.$keyword.'/'))
+            //->where_in('tags', array($keyword))
+            ->get('user');
+        
+        $data['users'] = $users;
+        
+        $this->load->view('connect', $data);
     }
     
     public function logout()
