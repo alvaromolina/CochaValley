@@ -14,13 +14,11 @@ class Event extends CI_Controller {
  
     function index()
     {
-       
         $this->load->model('Facebook_m');
         $userdata = $this->session->userdata('fb_data');
         $data = array();
         $data = array_merge($data,$userdata);
         $this->load->view('index',$data);
-
     }
     
     
