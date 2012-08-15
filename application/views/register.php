@@ -92,9 +92,10 @@
       </div>
       <div class="row">
         <div class="span10">
-            <h3>Confirmar tu participaci&oacute;n</h3><br>
+            <h3>Confirmar tu participaci&oacute;n para ek evento del 18/08/2012</h3><br>
             <div class="alert alert-info">
-              Solo las personas que confirmen su presencia (click en Chuck Norris) podran ingresar al evento. Las plazas son limitadas, apelamos a su honestidad. Estos datos pueden ser modificados posteriormente.
+             <strong> Solo las personas que confirmen su presencia (click en Chuck Norris) podran ingresar al evento. Las plazas son limitadas, apelamos a su honestidad. Estos datos pueden ser modificados posteriormente.
+             </strong>
             </div><br>
             <div class="control-group"  >
             <div class="controls" style="margin-left: 10px;">
