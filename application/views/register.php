@@ -39,7 +39,7 @@
            <div class="control-group">
               <label class="control-label" for="input01">Intereses/Tags</label>
               <div class="controls">
-                <input type="text" class="input-xlarge" id="tags" name="tags" value="<?=$tags?>">
+                <input class="input-xlarge" id="tags" name="tags" value="<?=$tags?>">
               </div>
             </div>
             <div class="control-group">
@@ -71,4 +71,7 @@
         </div>
 
       </div>
+      <script>
+        $('#tags').tagsInput();
+      </script>
 <?php $this->load->view('footer'); ?>

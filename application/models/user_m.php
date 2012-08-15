@@ -40,6 +40,6 @@ class User_m extends CI_Model {
     public function get($id){
 
         $user_db = $this->mongo_db->where(array('_id'=>new MongoId($id)))->get('user');
-        return $user_db;
+        return $user_db[0];
     }
 }

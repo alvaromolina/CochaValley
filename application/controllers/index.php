@@ -31,9 +31,9 @@ class Index extends CI_Controller {
         $this->load->model('User_m');
 
         
-        $data = array();
         $userdata = $this->session->userdata('fb_data');
-        $data = array_merge($data,$userdata);
+        $user = $this->User_m->get($userdata['id']);
+        $data = array_merge($user,$userdata);
         $data = array_merge($this->User_m->user_default,$data);
       
         if(isset($_GET['state']) and isset($_GET['code'])){

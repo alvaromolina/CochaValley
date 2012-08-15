@@ -3,7 +3,7 @@
         .fb_login {
 display: block;
 width: 285px;
-background: url(img/facebook-login.png) no-repeat top;
+background: url(<?=base_url();?>img/facebook-login.png) no-repeat top;
 color: white;
 font-size: small;
 text-align: center;
