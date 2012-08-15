@@ -32,8 +32,7 @@ text-align: center;
             </div>
             <div class="modal-body">
               <p>
-                Descubre las nuevas oportunidades para startups en Bolivia y el mundo. Conectate con la comunidad mas vibrante de tecnolog&iacute;a en Cochabamba.  Encuentra a tu pr&oacute;ximo co-founder o simplemente pasa un buen momento.
-              </p>
+Ven a la primera reuni&oacute;n de Cocha Valley. Tendremos exposiciones &uacute;tiles para todos aquellos interesados en StartUps. Se hablara de CochaValley y como puedes ser parte de el. Tambi&eacute;n veremos proyectos de personas de la comunidad y tendr&aacute;s un espacio para hablar de tus ideas o proyectos. Con&eacute;ctate con otras personas y empecemos a construir la comunidad tecnol&oacute;gica mas importante del pa&iacute;s.              </p>
               <h4>Inscripciones</h4>
                 Solo se aceptaran a personas que se hayan registrado y confirmado su asistencia a trav&eacute;s del portal <a href="http://cochavalley.com/event">cochavalley.com/event</a>
               <h4>Cronograma</h4>
