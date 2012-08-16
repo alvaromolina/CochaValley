@@ -94,7 +94,12 @@ class Event extends CI_Controller {
         
         $data['keyword'] = $keyword;
         
-        $this->load->view('connect', $data);
+        
+        if($data['id'])
+            $this->load->view('connect', $data);
+        else
+            $this->load->view('login', $data);
+
     }
     
     public function logout()

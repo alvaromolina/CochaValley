@@ -23,7 +23,10 @@ class User_m extends CI_Model {
             "tags" => "",
             "role" => "",
             "going" => "",
-            "looking" => ""
+            "looking" => "",
+            "company" => "",
+            "links" => "",
+            "twitter" => ""
 
 		);
         $this->load->library('mongo_db');

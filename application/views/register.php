@@ -91,6 +91,37 @@
         </div>
       </div>
       <div class="row">
+        <div class="span5">
+           <div class="control-group">
+              <label class="control-label" for="input01">Tus Links (separados por coma):</label>
+              <div class="controls">
+                <input class="input-large" id="links" name="links" value="<?=$links?>">
+              </div>
+            </div>
+        </div>
+        <div class="span5">
+          <div class="control-group">
+              <label class="control-label" for="input01">Empresa / Startup:</label>
+              <div class="controls">
+                <input type="text" class="input-large" id="company" name="company" value="<?=$company?>">
+              </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="span5">
+          <div class="control-group">
+              <label class="control-label" for="input01">Usuario Twitter:</label>
+              <div class="controls">
+                <div class="input-prepend">
+                  <span class="add-on">@</span>
+                  <input type="text" class="span2" id="twitter" name="twitter" value="<?=$twitter?>">
+                </div>
+              </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
         <div class="span10">
             <h3>Confirmar tu participaci&oacute;n para ek evento del 18/08/2012</h3><br>
             <div class="alert alert-info">
@@ -116,9 +147,7 @@
               </label>
             </div>
           </div>
-
         </div>
-
       </div>
       
       </fieldset>
@@ -132,6 +161,8 @@
       </form>
     </div>
       <script>
-        $('#tags').tagsInput({width: '230px'});
+        $('#tags').tagsInput({width: '240px'});
+        $('#links').tagsInput({width: '240px', defaultText:'add a Link'});
+
       </script>
 <?php $this->load->view('footer'); ?>
