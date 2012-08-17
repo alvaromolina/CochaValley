@@ -117,12 +117,19 @@ class Event extends CI_Controller {
     
     public function privacy(){
         $this->load->view('privacy');
-        
     }
     public function tos(){
         $this->load->view('tos');
-        
     }
+    
+    public function contact(){
+        $this->load->model('Facebook_m');
+        $data = array();
+        $data = $this->session->userdata('fb_data');
+        
+        $this->load->view('contact',$data);
+    }    
+    
     
     function backup()
     {

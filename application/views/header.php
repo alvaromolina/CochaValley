@@ -69,6 +69,8 @@
             <ul class="nav">
               <li class="active"><a href="<?=base_url();?>event/">Inicio</a></li>
               <li><a href="<?=base_url();?>event/connect">Conectar con participantes</a></li>
+              <li><a href="<?=base_url();?>event/contact">Contacto</a></li>
+
             </ul>
                 <?php if ($id) { ?>
             <ul class="nav pull-right">

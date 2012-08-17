@@ -105,7 +105,7 @@
         </div>
         <div class="span5">
           <div class="control-group">
-              <label class="control-label" for="input01">Empresa / Instituci&oacute;:</label>
+              <label class="control-label" for="input01">Empresa / Instituci&oacute;n:</label>
               <div class="controls">
                 <input type="text" class="input-large required" id="company" name="company" value="<?=$company?>">
               </div>
