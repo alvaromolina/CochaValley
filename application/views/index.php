@@ -18,7 +18,7 @@ text-align: center;
 
         <div class="span8">
           <h2>Primer evento Cocha Valley  </h2>
-          <h3><i class="icon-calendar"></i> 10/08/2012 4:44 PM</h3>
+          <h3><i class="icon-calendar"></i> 18/08/2012 4:44 PM</h3>
           <h3><i class="icon-map-marker"></i><a href="https://www.facebook.com/Cafevisual" target="_blank">La Muelita</a>
           <a href="http://amerpages.com/spa/bolivia/items/view/3712/la-muela-del-diablo-pub-cultural/" target="_blank" style="font-size: x-small; color: grey;">Direcci&oacute;n</a>
           </h3>
