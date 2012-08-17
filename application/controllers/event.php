@@ -61,14 +61,21 @@ class Event extends CI_Controller {
     
     public function registerUser(){
         
-        $_POST['name'] = $_POST['first_name'].' '.$_POST['last_name'];
-        $data = $_POST;
-        $userdata = $this->session->userdata('fb_data');
-        $data = array_merge($userdata,$data);
-        $this->load->model('user_m');
-        $this->user_m->set($data);
-        $this->load->model('Facebook_m');
-        $this->load->view('index',$data);
+        
+        if(isset($_POST['first_name'])){
+            $_POST['name'] = $_POST['first_name'].' '.$_POST['last_name'];
+            $data = $_POST;
+            $this->load->model('Facebook_m');
+            $userdata = $this->session->userdata('fb_data');
+            $data = array_merge($userdata,$data);
+            $this->load->model('user_m');
+            $this->user_m->set($data);
+            $this->load->view('index',$data);
+
+        }else{
+            redirect(base_url().'event');
+        }
+        
 
     }
     
