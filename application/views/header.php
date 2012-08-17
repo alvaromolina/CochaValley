@@ -27,8 +27,10 @@
               .users li:hover .userTags { display: block; }
     </style>
     <link href="<?=base_url();?>css/jquery.tagsinput.css" rel="stylesheet">
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <!--<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script> -->
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
     <script src="<?=base_url();?>js/jquery.tagsinput.js"></script>
+    <script type="text/javascript" src="http://jzaefferer.github.com/jquery-validation/jquery.validate.js"></script>
 
     <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>

@@ -1,9 +1,13 @@
 <?php $this->load->view('header'); ?>
 
-
+      <script>        
+        $(document).ready(function(){
+          $("#regform").validate();
+        });
+      </script>
       <!-- Example row of columns -->
     <div class="well">
-      <form class="form-horizontal" action="<?=base_url().'event/registerUser'?>" method="POST">
+      <form class="form-horizontal" id="regform" action="<?=base_url().'event/registerUser'?>" method="POST">
        <fieldset>
         <legend>Registro Cocha Valley</legend>
 
@@ -28,14 +32,14 @@
             <div class="control-group">
               <label class="control-label" for="input01">Nombre:</label>
               <div class="controls">
-                <input type="text" class="input-medium" id="first_name" name="first_name" value="<?=$first_name?>">
+                <input type="text" class="input-medium required" id="first_name" name="first_name" value="<?=$first_name?>">
                 <input type="hidden"  id="id" name="id" value="<?=$id?>">
               </div>
             </div>
             <div class="control-group">
               <label class="control-label" for="input01">Apellido:</label>
               <div class="controls">
-                <input type="text" class="input-medium" id="last_name" name="last_name" value="<?=$last_name?>">
+                <input type="text" class="input-medium required" id="last_name" name="last_name" value="<?=$last_name?>">
               </div>
             </div>
            <div class="control-group">
@@ -49,7 +53,7 @@
           <div class="control-group">
             <label class="control-label" for="multiSelect">Tus roles:</label>
             <div class="controls">
-              <select multiple="multiple" id="role" name="role[]" size="7">
+              <select multiple="multiple" class="required" id="role" name="role[]" size="7">
                 <option <? if(in_array('Designer',$role)) echo 'selected' ?> >Designer</option>
                 <option <? if(in_array('Developer',$role)) echo 'selected' ?> >Developer</option>
                 <option <? if(in_array('Entrepreneur',$role)) echo 'selected' ?> >Entrepreneur</option>
@@ -67,7 +71,7 @@
            <div class="control-group">
               <label class="control-label" for="input01">Intereses/Tags:</label>
               <div class="controls">
-                <input class="input-xlarge" id="tags" name="tags" value="<?=$tags?>">
+                <input class="input-xlarge required" id="tags" name="tags" value="<?=$tags?>">
               </div>
             </div>
         </div>
@@ -76,7 +80,7 @@
             <label class="control-label" for="multiSelect">Estas buscando:</label>
             <div class="controls">
               
-          <select multiple="multiple" id="looking" name="looking[]" size="7">
+          <select multiple="multiple" class="required" id="looking" name="looking[]" size="7">
                 <option <? if(in_array('Co-founder',$looking)) echo 'selected' ?> >Co-founder</option>
                 <option <? if(in_array('Developers',$looking)) echo 'selected' ?> >Developers</option>
                 <option <? if(in_array('Designers',$looking)) echo 'selected' ?> >Designers</option>
@@ -95,15 +99,15 @@
            <div class="control-group">
               <label class="control-label" for="input01">Tus Links (separados por coma):</label>
               <div class="controls">
-                <input class="input-large" id="links" name="links" value="<?=$links?>">
+                <input class="input-large"  id="links" name="links" value="<?=$links?>">
               </div>
             </div>
         </div>
         <div class="span5">
           <div class="control-group">
-              <label class="control-label" for="input01">Empresa / Startup:</label>
+              <label class="control-label" for="input01">Empresa / Instituci&oacute;:</label>
               <div class="controls">
-                <input type="text" class="input-large" id="company" name="company" value="<?=$company?>">
+                <input type="text" class="input-large required" id="company" name="company" value="<?=$company?>">
               </div>
           </div>
         </div>
@@ -162,7 +166,9 @@
     </div>
       <script>
         $('#tags').tagsInput({width: '240px'});
-        $('#links').tagsInput({width: '240px', defaultText:'add a Link'});
-
+        $('#links').tagsInput({width: '240px', defaultText:'add a Link'});          
+        $(document).ready(function(){
+          $("#regform").validate();
+        });
       </script>
 <?php $this->load->view('footer'); ?>
