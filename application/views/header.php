@@ -67,10 +67,10 @@
           <a class="brand" href="<?=base_url();?>">Cocha Valley</a>
           <div class="nav-collapse">
             <ul class="nav">
-              <li class="active"><a href="<?=base_url();?>event/">Inicio</a></li>
-              <li><a href="<?=base_url();?>news/">Noticias</a></li>
-              <li><a href="<?=base_url();?>community/">Comunidad</a></li>
-              <li><a href="<?=base_url();?>event/">Eventos</a></li>
+              <li <?= $menu=='home'? 'class="active"' :''  ?>><a href="<?=base_url();?>event/">Inicio</a></li>
+              <li <?= $menu=='news'? 'class="active"' :''  ?>><a href="<?=base_url();?>news/">Noticias</a></li>
+              <li <?= $menu=='community'? 'class="active"' :''  ?>><a href="<?=base_url();?>community/">Comunidad</a></li>
+              <li <?= $menu=='event'? 'class="active"' :''  ?>><a href="<?=base_url();?>event/">Eventos</a></li>
 
             </ul>
                 <?php if ($id) { ?>

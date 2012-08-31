@@ -19,6 +19,8 @@ class Event extends CI_Controller {
         $this->load->model('User_m');
         $userdata = $this->session->userdata('fb_data');
         $data = array_merge($this->User_m->user_default,$userdata);
+        $data['menu'] = 'event';
+
         $this->load->view('index',$data);
 
     }
@@ -35,7 +37,8 @@ class Event extends CI_Controller {
         $user = $this->User_m->get($userdata['id']);
         $data = array_merge($user,$userdata);
         $data = array_merge($this->User_m->user_default,$data);
-    
+        $data['menu'] = '';
+
         if(isset($_GET['state']) and isset($_GET['code'])){
             
             if($data['id'])
@@ -61,19 +64,19 @@ class Event extends CI_Controller {
     
     public function registerUser(){
         
-        
         if(isset($_POST['first_name'])){
             $_POST['name'] = $_POST['first_name'].' '.$_POST['last_name'];
             $data = $_POST;
+            $data['menu'] = 'home';
             $this->load->model('Facebook_m');
             $userdata = $this->session->userdata('fb_data');
             $data = array_merge($userdata,$data);
             $this->load->model('user_m');
             $this->user_m->set($data);
-            $this->load->view('index',$data);
+            $this->load->view('home',$data);
 
         }else{
-            redirect(base_url().'event');
+            redirect(base_url());
         }
         
 
@@ -101,7 +104,8 @@ class Event extends CI_Controller {
         
         $data['keyword'] = $keyword;
         
-        
+        $data['menu'] = 'event';
+
         if($data['id'])
             $this->load->view('connect', $data);
         else
@@ -117,7 +121,8 @@ class Event extends CI_Controller {
         $users = $this->mongo_db->get('user');
         $data['users'] = $users;
         
-        
+        $data['menu'] = 'event';
+
         if($data['id'])
             $this->load->view('lista', $data);
         else
@@ -149,7 +154,8 @@ class Event extends CI_Controller {
         $this->load->model('Facebook_m');
         $data = array();
         $data = $this->session->userdata('fb_data');
-        
+        $data['menu'] = 'event';
+
         $this->load->view('contact',$data);
     }    
     

@@ -31,7 +31,7 @@ class Community extends CI_Controller {
         $data['users'] = $users;
         
         $data['keyword'] = $keyword;
-        
+        $data['menu'] = 'community';
         
         if($data['id'])
             $this->load->view('connect', $data);

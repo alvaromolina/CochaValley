@@ -15,7 +15,6 @@ text-align: center;
         <div class="span4">
           <img src="<?=base_url()?>img/cochaValley.png">
         </div>
-
         <div class="span6">
           <p style="text-align: justify;">
 <strong>Cocha Valley</strong> es un grupo de personas que creemos en el desarrollo de nuestro pa&iacute;s a trav&eacute;s de la tecnolog&iacute;a.

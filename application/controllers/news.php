@@ -15,6 +15,8 @@ class News extends CI_Controller {
         $this->load->model('Facebook_m');
         $data = array();
         $data = $this->session->userdata('fb_data');
+        $data['menu'] = 'news';
+
         $this->load->view('news', $data);
             
     }

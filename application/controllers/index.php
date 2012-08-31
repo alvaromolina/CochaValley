@@ -22,7 +22,8 @@ class Index extends CI_Controller {
         $user = $this->User_m->get($userdata['id']);
         $data = array_merge($user,$userdata);
         $data = array_merge($this->User_m->user_default,$data);
-    
+        $data['menu'] = 'home';
+
         if(isset($_GET['state']) and isset($_GET['code'])){
             
             if($data['id'])
