@@ -13,7 +13,7 @@ text-align: center;
       <!-- Example row of columns -->
       <div class="row">
         <div class="span4">
-          <img src="http://distilleryimage10.s3.amazonaws.com/776ca014e01711e1900e22000a1e8691_7.jpg">
+          <img src="<?=base_url()?>img/cochaValleyEvent.png">
         </div>
 
         <div class="span8">
@@ -58,30 +58,26 @@ Ser&aacute;n presentaciones entre 5 y 10 min m&aacute;ximo por persona.
 <a class="btn btn-info" data-toggle="modal" href="#myModal" >Ver mas detalles >></a>
                 <br>
                 <br>
-                <?php if ($id) { ?>
-                  <?php if ($going=='sure') { ?>
-                    <div class="alert alert-success">
-                      Ya estas registrado en el evento. Haz click <a href="<?=base_url()?>event/register">aqui</a> para modificar tus datos.
-                    </div>
   
-                  <? } elseif($going=='maybe') { ?>
-                    <div class="alert alert-warning">
-                      Te registraste en el sistema pero no confirmaste tu presencia en el evento. Solo aquellos que confirmen su presencia podran ingresar. Haz click <a href="<?=base_url()?>event/register">aqui</a> para modificar tus datos.
-                    </div>
-                  <? } else { ?>
-                   <div class="alert alert-warning">
-                      Gracias por dejarnos saber que no podras ir al evento. Si algo cambio haz click <a href="<?=base_url()?>event/register">aqui</a> para modificar tus datos.
-                    </div>
-                  <? } ?>
-
-                <? } else { ?>
-                <a href="javascript:popup('<?=$loginUrl;?>','',500,350);" class="fb_login" style="padding-bottom: 0px; color: white;  padding-top: 15px; height: 40px;">
-                  <span style="margin-left: 25px; font-size: 17px; ">
-                    <strong>Registrate con Facebook</strong>
-                  </span>
-                  </a>
-                <? } ?>
-
+                <div class="alert alert-success">
+                  Este evento ya sucedio. Si no pudiste participar pronto se realizaran nuevos eventos.
+                </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="span5 well">
+          <img src="<?=base_url()?>img/evento_1_1.jpeg">
+        </div>
+        <div class="span5 well">
+          <img src="<?=base_url()?>img/evento_1_2.jpeg">
+        </div>
+      </div>
+      <div class="row">
+        <div class="span5 well">
+          <img src="<?=base_url()?>img/evento_1_3.jpeg">
+        </div>
+        <div class="span5 well">
+          <img src="<?=base_url()?>img/evento_1_4.jpeg">
         </div>
       </div>
       <script>

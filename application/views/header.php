@@ -64,12 +64,13 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </a>
-          <a class="brand" href="<?=base_url();?>event/">Cocha Valley</a>
+          <a class="brand" href="<?=base_url();?>">Cocha Valley</a>
           <div class="nav-collapse">
             <ul class="nav">
               <li class="active"><a href="<?=base_url();?>event/">Inicio</a></li>
-              <li><a href="<?=base_url();?>event/connect">Conectar con participantes</a></li>
-              <li><a href="<?=base_url();?>event/contact">Contacto</a></li>
+              <li><a href="<?=base_url();?>news/">Noticias</a></li>
+              <li><a href="<?=base_url();?>community/">Comunidad</a></li>
+              <li><a href="<?=base_url();?>event/">Eventos</a></li>
 
             </ul>
                 <?php if ($id) { ?>

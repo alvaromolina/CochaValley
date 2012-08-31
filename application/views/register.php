@@ -125,6 +125,7 @@
           </div>
         </div>
       </div>
+      <!--
       <div class="row">
         <div class="span10">
             <h3>Confirmar tu participaci&oacute;n para ek evento del 18/08/2012</h3><br>
@@ -154,9 +155,10 @@
         </div>
       </div>
       
+      -->
+      
       </fieldset>
 
-      
       
       <div class="form-actions">
         <button type="submit" class="btn btn-primary">Guadar</button>

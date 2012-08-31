@@ -108,6 +108,22 @@ class Event extends CI_Controller {
             $this->load->view('login', $data);
 
     }
+
+    public function lista(){
+        $this->load->model('Facebook_m');
+        $data = $this->session->userdata('fb_data');
+        
+        $this->load->library('Mongo_db');
+        $users = $this->mongo_db->get('user');
+        $data['users'] = $users;
+        
+        
+        if($data['id'])
+            $this->load->view('lista', $data);
+        else
+            $this->load->view('login', $data);
+
+    }
     
     public function logout()
     {
@@ -118,7 +134,7 @@ class Event extends CI_Controller {
         //setcookie('fbs_'.$this->Facebook_m->facebook->getAppId(), '', time()-100, '/', 'localhost');
         session_destroy();
         $this->session->sess_destroy();
-        redirect(base_url().'event');
+        redirect(base_url());
     
     }
     

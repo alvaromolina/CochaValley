@@ -28,7 +28,7 @@ class Index extends CI_Controller {
             if($data['id'])
                 $data['nexturl'] = base_url().'event/register';
             else
-                $data['nexturl'] = base_url().'event';
+                $data['nexturl'] = base_url();
 
             $this->load->view('loginfb',$data);
             
@@ -36,7 +36,9 @@ class Index extends CI_Controller {
             $data['nexturl'] = base_url().'event';
             $this->load->view('loginfb',$data);
         }else{
-            redirect('https://www.facebook.com/groups/240867712700407/');
+            
+            $this->load->view('home',$data);
+            //redirect('https://www.facebook.com/groups/240867712700407/');
         }
 
     }
