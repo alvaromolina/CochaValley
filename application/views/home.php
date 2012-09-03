@@ -18,8 +18,10 @@ text-align: center;
         <div class="span6">
           <p style="text-align: justify;">
 <strong>Cocha Valley</strong> es un grupo de personas que creemos en el desarrollo de nuestro pa&iacute;s a trav&eacute;s de la tecnolog&iacute;a.
-Tenemos sede en la ciudad de Cochabamba,pero estamos abiertos al mundo entero. 
-Aun estamos en construcci&oacute;n, pero crecemos dia a dia.<br>
+Tenemos sede en la ciudad de Cochabamba,pero estamos abiertos al mundo entero. Nacio del <a href="http://cochabamba.startupweekend.org/" target="_blank">
+  Startup Weekend.
+</a>
+Aun estamos en construcci&oacute;n, pero crecemos <a href="<?base_url()?>event">dia a dia.</a><br>
 Puedes ver nuestras noticias <a href="<?base_url()?>/news">aca</a>. 
 O en <a href="https://twitter.com/CochaValley" target="_blank">twitter</a>. 
 Y en nuestro grupo en <a href="https://www.facebook.com/groups/240867712700407/" target="_blank">Facebook</a>.

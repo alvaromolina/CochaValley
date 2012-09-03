@@ -43,6 +43,16 @@ class Index extends CI_Controller {
         }
 
     }
+    
+    
+    function login(){
+        $this->load->model('Facebook_m');
+        $data = $this->session->userdata('fb_data');
+
+        $data['menu'] = 'event';
+        $this->load->view('login',$data);
+
+    }
 
   }
 ?>
