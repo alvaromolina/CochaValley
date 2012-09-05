@@ -38,6 +38,7 @@ class Logo extends CI_Controller {
         $this->load->library('mongo_db');
         $oldvotes = -1;
         if(!$data['id']){
+            $this->session->set_userdata(array('next_url'=>base_url().'logo'));
             echo '{"result":"nolog"}';
         }else{
             $this->load->library('mongo_db');

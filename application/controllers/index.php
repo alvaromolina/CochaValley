@@ -24,10 +24,15 @@ class Index extends CI_Controller {
         $data = array_merge($this->User_m->user_default,$data);
         $data['menu'] = 'home';
 
+
         if(isset($_GET['state']) and isset($_GET['code'])){
-            
+            $next_url = $this->session->userdata('next_url');
+            if(!$next_url){
+               $next_url =  base_url().'event/register';
+               $this->session->unset_userdata('next_url');
+            }
             if($data['id'])
-                $data['nexturl'] = base_url().'event/register';
+                $data['nexturl'] = $next_url;
             else
                 $data['nexturl'] = base_url();
 
