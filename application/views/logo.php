@@ -49,7 +49,7 @@
   $("button").click(function() {
   var id = $(this).attr('id');
   $('#myModal').modal('show');
-  $.get('vote/'+$(this).attr('id'), function(data) {
+  $.get('<?=base_url()?>logo/vote/'+$(this).attr('id'), function(data) {
     
     data = JSON.parse(data);
     if(data.result=='nolog'){
