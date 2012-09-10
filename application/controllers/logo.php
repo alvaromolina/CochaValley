@@ -41,6 +41,7 @@ class Logo extends CI_Controller {
             $this->session->set_userdata(array('next_url'=>base_url().'logo'));
             echo '{"result":"nolog"}';
         }else{
+            /*
             $this->load->library('mongo_db');
             
             $voted = $this->mongo_db->where(array('users'=>$data['id']))->get('logos');
@@ -63,6 +64,8 @@ class Logo extends CI_Controller {
                 echo '{"result":"(2) Error favor intentar nuevamente"}';
             else
                 echo '{"result":"ok","votes":'.$votes.',"oldvotes":'.$oldvotes.'}';
+            */
+            echo '{"result":"El periodo de votacion concluyo. Muchas gracias"}';
         }
     }
     

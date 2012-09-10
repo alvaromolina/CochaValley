@@ -1,6 +1,10 @@
 <?php $this->load->view('header'); ?>
 
-
+      <div class="row">
+        <div class="span11 alert alert-success">
+          La votacion ya concluyo gracias por sus votos.
+        </div>
+      </div>
 
       <div class="row">
       <? $cont = 0; ?>
