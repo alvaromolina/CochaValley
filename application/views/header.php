@@ -13,9 +13,9 @@
     <style type="text/css">
       body {
         padding-top: 60px;
-        padding-bottom: 40px;
+      /*padding-bottom: 40px; */
+        background: url(<?php echo base_url(); ?>/img/bg.gif) repeat top left;
       }
-        
         .users { overflow: hidden; margin: 0; padding: 0; list-style: none; }
           .users li { position: relative; overflow: hidden; float: left; width: 220px; margin: 0 20px 20px 0; padding: 10px; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; background-color: #F5F5F5; border: 1px solid rgba(0, 0, 0, 0.05); border-radius: 4px; }
             .users li:hover { box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2); }
@@ -64,15 +64,15 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </a>
-          <a class="brand" href="<?=base_url();?>">Cocha Valley</a>
+          <a class="brand" href="<?=base_url();?>" style="color: red;">Cocha Valley</a>
           <div class="nav-collapse">
             <ul class="nav">
               <li <?= $menu=='home'? 'class="active"' :''  ?>><a href="<?=base_url();?>index/">Inicio</a></li>
               <li <?= $menu=='news'? 'class="active"' :''  ?>><a href="<?=base_url();?>news/">Noticias</a></li>
               <li <?= $menu=='community'? 'class="active"' :''  ?>><a href="<?=base_url();?>community/">Comunidad</a></li>
               <li <?= $menu=='event'? 'class="active"' :''  ?>><a href="<?=base_url();?>event/">Eventos</a></li>
-              <li <?= $menu=='logo'? 'class="active"' :''  ?>><a href="<?=base_url();?>logo/">Logo</a></li>
             </ul>
+            
                 <?php if ($id) { ?>
             <ul class="nav pull-right">
                 <li>

@@ -44,6 +44,7 @@ class Index extends CI_Controller {
         }else{
             
             $this->load->view('home',$data);
+
             //redirect('https://www.facebook.com/groups/240867712700407/');
         }
 

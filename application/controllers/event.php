@@ -21,10 +21,22 @@ class Event extends CI_Controller {
         $data = array_merge($this->User_m->user_default,$userdata);
         $data['menu'] = 'event';
 
-        $this->load->view('index',$data);
+        $this->load->view('events',$data);
 
     }
     
+    function evento_cocha()
+    {
+       
+        $this->load->model('Facebook_m');
+        $this->load->model('User_m');
+        $userdata = $this->session->userdata('fb_data');
+        $data = array_merge($this->User_m->user_default,$userdata);
+        $data['menu'] = 'event';
+
+        $this->load->view('evento_muela',$data);
+
+    }
     
     function register()
     {

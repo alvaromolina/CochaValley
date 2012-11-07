@@ -11,9 +11,9 @@ text-align: center;
       </style>
 
       <!-- Example row of columns -->
-      <div class="row hero-unit">
+      <div class="row hero-unit" style="background-color: white;">
         <div class="span4">
-          <img src="<?=base_url()?>img/cochaValley.png">
+          <img src="<?=base_url()?>img/CochaValleyLogo.png">
         </div>
         <div class="span6">
           <p style="text-align: justify;">

@@ -1,13 +1,28 @@
 
 
-      <hr>
+    </div>
+    
+    
+   <style>
+    #footerWrap {
+    background: url(<?php echo base_url(); ?>img/bg_footer.png) repeat-x;
+    margin: 100px 0 0 0;
+width: 100%;
+height: 100px;
+clear: both;
+    }
+   </style>
 
+
+<div id="footerWrap">
+  
+      <div class="container">
       <footer>
-        <p>&copy; CochaValley 2012</p>
+        <br>
+        <p class="muted">&copy; CochaValley 2012</p>
       </footer>
-
-    </div> <!-- /container -->
-
+      </div>
+</div>
     <!-- Le javascript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
