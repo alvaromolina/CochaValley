@@ -14,6 +14,21 @@
     El evento consiste en una combinaci&oacute;n de presentaciones por agentes de cambio local. Se presentan iniciativas innovadoras en los campos de la tecnolog&iacute;a, la educaci&oacute;n, el emprendimiento social, medio ambiente y otras &aacute;reas del desarrollo humano, el que hacer social y la actividad econ&oacute;mica.
   </div>
 </div>
+
+<hr>
+<div class="media">
+  <a class="pull-left" href="http://bo.unleashingideas.org/activity/jornada-de-experiencias-de-emprendedores">
+    <img class="media-object" width="150" src="https://fbcdn-profile-a.akamaihd.net/hprofile-ak-snc6/188163_474502929260669_2115975982_n.jpg>
+  </a>
+  <div class="media-body">
+    <a href="http://bo.unleashingideas.org/activity/jornada-de-experiencias-de-emprendedores">
+      <h4 class="media-heading"> + Experiencias + Emprendedores</h4>
+    </a>
+    <h5><i class="icon-calendar"></i> 16/11/2012</h5>
+En la Semana Mundial del Emprendimiento(Global Entrepreneurship Week)
+, el Club de Emprendedores de la Universidad Cat&oacute;lica Boliviana y Cocha Valley te invitan a la:
+<a href="http://bo.unleashingideas.org/activity/jornada-de-experiencias-de-emprendedores" target="_blank">JORNADA DE EXPERIENCIAS DE EMPRENDEDORES</a>
+  </div>
 <hr>
 <div class="media">
   <a class="pull-left" href="https://www.facebook.com/GDGCochabamba">
