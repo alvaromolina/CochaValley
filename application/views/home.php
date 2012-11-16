@@ -37,6 +37,20 @@ Y en nuestro grupo en <a href="https://www.facebook.com/groups/240867712700407/"
 
         </div>
       </div>
+      
+      <div class="row hero-unit" style="background-color: white;">
+        <div class="span4">
+            <img src="<?=base_url().'img/SME 2012.jpg'?>" >
+        </div>
+        <div class="span6">
+          <p style="text-align: justify;">
+En la semana mundial del emprendimiento Bolivia 2012. Participa y ven a la 
+
+<a href="https://www.facebook.com/events/474502929260669/" target="_blank">jornada de emprendeores</a>.
+
+
+        </div>
+      </div>
 
 
 <?php $this->load->view('footer'); ?>

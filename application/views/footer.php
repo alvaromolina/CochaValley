@@ -17,10 +17,20 @@ clear: both;
 <div id="footerWrap">
   
       <div class="container">
+        <div class="row">
+          <div class="span4">
       <footer>
         <br>
         <p class="muted">&copy; CochaValley 2012</p>
       </footer>
+          </div>
+          <div class="span4">
+            &nbsp;
+          </div>
+          <div class="span4">
+          </div>
+        </div>
+
       </div>
 </div>
     <!-- Le javascript
