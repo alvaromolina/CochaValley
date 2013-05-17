@@ -37,7 +37,7 @@ Y en nuestro grupo en <a href="https://www.facebook.com/groups/240867712700407/"
 
         </div>
       </div>
-      
+      <!--
       <div class="row hero-unit" style="background-color: white;">
         <div class="span4">
             <img src="<?=base_url().'img/SME 2012.jpg'?>" >
@@ -51,6 +51,7 @@ En la semana mundial del emprendimiento Bolivia 2012. Participa y ven a la
 
         </div>
       </div>
+      -->
 
 
 <?php $this->load->view('footer'); ?>
